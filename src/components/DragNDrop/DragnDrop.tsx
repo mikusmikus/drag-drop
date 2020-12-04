@@ -102,8 +102,9 @@ const DragNDrop: FC<Props> = ({ data }) => {
       setList(newList);
       setInputValue('');
     } else {
-      alert('add note');
+      alert('add note'); 
     }
+    setInputValue('');
   };
 
   return (
@@ -120,6 +121,7 @@ const DragNDrop: FC<Props> = ({ data }) => {
             <input
               type="text"
               className={style.input}
+              value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
             <button type="button" className={style.button} onClick={() => addNewNoteHandler()}>
